@@ -1,0 +1,114 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-family: "Source Code Pro", monospace;
+}
+
+h2 {
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: -10px;
+}
+
+h3 {
+    font-family: "Source Code Pro", monospace;
+
+}
+
+button {
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.focus {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45),
+                       rgba(0, 0, 0, 0.5)), url(https://media.discordapp.net/attachments/1144092548902694980/1226015140172927067/image.png?ex=66233a93&is=6610c593&hm=4b9d28cffebbeac78ce5e07088d0c53764c6ebe9d4a965a49ccd2d8418dfb3fe&=&format=webp&quality=lossless&width=956&height=671);
+    
+    border-radius: 10px;
+    padding: 10%;
+    color: white;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-y: top;
+    background-size: inherit;
+}
+
+section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+header {
+    overflow: hidden; /* Clear floats */
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+header h1 {
+    float: left; /* Title floats left */
+    font-family: "Source Code Pro", monospace;
+    font-size: 25px;
+    font-weight: 650;
+    margin-top: 10px;
+}
+
+nav {
+    float: right; /* Nav floats right */
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 600;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: black;
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    font-family: "Source Code Pro", monospace;
+}
