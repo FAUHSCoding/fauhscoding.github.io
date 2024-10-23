@@ -1,0 +1,17 @@
+body{
+    padding: 25px;
+    background-color:#1a0b4f;
+  }
+  .title {
+      color: #c52d2d;
+  }
+  p {
+    font-family:Times New Roman;
+    color:#ffffff;
+  }
+  .big {
+    color: #c52d2d;
+    text-align: center;
+    text-size-adjust: 120px;
+  }
+  

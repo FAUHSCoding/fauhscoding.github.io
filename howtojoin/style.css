@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-color: #9ad0f9;
+  }
+  
+  h1 {
+    font-family: monospace;
+    text-decoration: underline;
+  }
+  
+  p {
+    font-family: monospace;
+  }
+  
+  img {
+    display: block;
+    border-color: black;
+    border-width: 5pt;
+    border-style: solid;
+  }
+  
