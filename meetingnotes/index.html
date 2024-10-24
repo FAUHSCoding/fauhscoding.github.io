@@ -4,7 +4,7 @@
 	<title>Meeting Notes</title>
 	<meta charset = "UTF-8"/>
 
-  <link rel="stylesheet" href="OverCSS.css">
+  <!-- <link rel="stylesheet" href="OverCSS.css"> this doesn't exist for whatever reason. page still works fine. -oli -->
     
 	<style>
   	.navigation{
@@ -25,10 +25,14 @@
 
   	}
 
+	a:any-link{
+		color:lime;
+		text-decoration: none;
+	}
+
   	a:hover{
     	color: blue;
   	}
-
 
   	div{
     	background-color: blue;
@@ -37,14 +41,14 @@
   </head>
   <body>
 	<div class = "navigation">
-  	<a>Landing Page</a>
-  	<a>Events</a>
+  	<a href="/">Landing Page</a>
+  	<a href="/events/">Events</a>
   	<a>About</a>
-  	<a>FAQ</a>
-  	<a>Meeting Notes</a>
+  	<a href="/faq/">FAQ</a>
+  	<a href="/meetingnotes/">Meeting Notes</a>
   	<a>Project Page</a>
-  	<a>Leaders</a>
-  	<a>How to Join</a>
+  	<a href="/leadership/">Leaders</a>
+  	<a href="/howtojoin/">How to Join</a>
 	</div>
 	<h1>Meeting Notes</h1>
 	<h2>10/2 Meeting</h2>
