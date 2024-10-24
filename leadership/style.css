@@ -8,6 +8,7 @@
     animation-timing-function: ease;
     animation-fill-mode: both;
     display: inline-block;
+    font-size: 50px;
   }
   
   #leadershiptitlediv {
@@ -25,7 +26,7 @@
   
     50% {
       background-color: greenyellow;
-      transform: rotate(360deg);
+      transform: rotate(3600deg);
     }
   
     75% {
@@ -50,6 +51,7 @@
     animation-direction: reverse;
     animation-timing-function: ease;
     animation-fill-mode: both;
+      font-size: 20px;
   }
   
   @keyframes pmain {
