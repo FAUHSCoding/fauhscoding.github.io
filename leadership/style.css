@@ -38,7 +38,13 @@
     }
   }
   body{
-    background-color: lightblue;
+    animation-name: body;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
   }
   #pmain{
     text-align: center;
@@ -76,4 +82,30 @@
     }
     
   }
+@keyframes body {
+    0% {
+      background-color: red;
+    }
+  
+    40% {
+      background-color: orange;
+    }
+  
+    45% {
+      background-color: yellow;
+    }
+  
+    50% {
+      background-color: yellowgreen;
+    }
+
+    55% {
+        green
+    }
+  
+    100% {
+      background-color: #00CCFF;
+    }
+  }
+}
   
