@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Phantom+Sans:wght@400;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Phantom Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-hc-red text-white font-bold py-3 px-6 rounded-full transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-hc-red text-hc-red font-bold py-3 px-6 rounded-full transition-all duration-200 ease-in-out hover:bg-hc-red hover:text-white hover:scale-105;
+  }
+  
+  .card-primary {
+    @apply bg-white p-6 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-hc-red via-hc-orange to-hc-yellow bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-hc-blue via-hc-cyan to-hc-green;
+  }
+}
