@@ -16,7 +16,8 @@ import {
   Monitor,
   Brain,
   Award,
-  Gift
+  Gift,
+  MessageCircle
 } from 'lucide-react'
 
 interface WeeklyActivity {
@@ -180,20 +181,22 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
               <a 
-                href="#join" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeNvGlDOOH0hfegAQyI2ROafTluhOvc5DDGKhsjfsIPq_-9jA/viewform?usp=dialog" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center space-x-2"
               >
-                <span>Join Our Club</span>
+                <span>Sign Up</span>
                 <ChevronRight className="w-5 h-5" />
               </a>
               <a 
-                href="https://hackclub.com/" 
+                href="https://discord.gg/qWZNEtZ4Zv" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-outline inline-flex items-center space-x-2"
               >
-                <span>Learn About Hack Club</span>
-                <ExternalLink className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4" />
+                <span>Join our Discord Server</span>
               </a>
             </div>
           </div>
@@ -398,17 +401,16 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">Get Connected</h4>
               <div className="space-y-2 text-sm">
-                <a href="mailto:faucodingclub@example.com" className="block text-hc-muted hover:text-white transition-colors">Email Us</a>
-                <a href="#" className="block text-hc-muted hover:text-white transition-colors">Discord Server</a>
+                <a href="https://discord.gg/qWZNEtZ4Zv" className="block text-hc-muted hover:text-white transition-colors">Discord Server</a>
                 <a href="https://hackclub.com/slack" className="block text-hc-muted hover:text-white transition-colors">Hack Club Slack</a>
-                <a href="https://github.com/fauhscoding" className="block text-hc-muted hover:text-white transition-colors">GitHub</a>
+                <a href="https://github.com/FAUHSCoding" className="block text-hc-muted hover:text-white transition-colors">GitHub</a>
               </div>
             </div>
           </div>
           
           <div className="border-t border-hc-darkless mt-8 pt-8 text-center text-sm text-hc-muted">
             <p>&copy; 2025 FAU Coding Club. Proudly affiliated with Florida Atlantic University.</p>
-            <p className="mt-2">Not affiliated with FAUHS. Official Hack Club chapter working toward 501(c)(3) status.</p>
+            <p className="mt-2">No longer affiliated with FAUHS. Official Hack Club chapter working toward 501(c)(3) status.</p>
           </div>
         </div>
       </footer>
