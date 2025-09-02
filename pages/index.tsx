@@ -19,6 +19,7 @@ import {
   Gift,
   MessageCircle
 } from 'lucide-react'
+import DarkModeToggle from '../components/DarkModeToggle'
 
 interface WeeklyActivity {
   id: string
@@ -110,9 +111,9 @@ export default function Home() {
   const [selectedActivity, setSelectedActivity] = useState<string | null>(null)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-hc-dark transition-colors duration-300">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header className="bg-white dark:bg-hc-dark border-b border-gray-100 dark:border-hc-darkless sticky top-0 z-50 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo Section */}
@@ -120,37 +121,41 @@ export default function Home() {
               <div className="w-8 h-8 bg-hc-red rounded-lg flex items-center justify-center">
                 <Code className="w-5 h-5 text-white" />
               </div>
-              <span className="text-gray-900 font-bold text-lg tracking-tight">FAU Coding Club</span>
+              <span className="text-gray-900 dark:text-white font-bold text-lg tracking-tight">FAU Coding Club</span>
             </div>
             
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-gray-700 hover:text-hc-red font-medium transition-colors duration-200">
+              <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-hc-red dark:hover:text-hc-red font-medium transition-colors duration-200">
                 About
               </a>
-              <a href="#activities" className="text-gray-700 hover:text-hc-red font-medium transition-colors duration-200">
+              <a href="#activities" className="text-gray-700 dark:text-gray-300 hover:text-hc-red dark:hover:text-hc-red font-medium transition-colors duration-200">
                 Activities
               </a>
-              <a href="#features" className="text-gray-700 hover:text-hc-red font-medium transition-colors duration-200">
+              <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-hc-red dark:hover:text-hc-red font-medium transition-colors duration-200">
                 Features
               </a>
+              <DarkModeToggle />
               <a href="#join" className="bg-hc-red text-white px-4 py-2 rounded-lg font-medium hover:bg-hc-red/90 transition-all duration-200 shadow-sm hover:shadow-md">
                 Join Us
               </a>
             </nav>
 
             {/* Mobile menu button */}
-            <button className="md:hidden p-2 text-gray-700 hover:text-hc-red transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+            <div className="md:hidden flex items-center space-x-2">
+              <DarkModeToggle />
+              <button className="p-2 text-gray-700 dark:text-gray-300 hover:text-hc-red dark:hover:text-hc-red transition-colors">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-hc-snow via-white to-hc-smoke py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-hc-snow via-white to-hc-smoke dark:from-hc-darkless dark:via-hc-dark dark:to-hc-darker py-20 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-hc-red/10 text-hc-red px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
@@ -158,22 +163,22 @@ export default function Home() {
               <span>Official Hack Club Chapter</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-hc-black mb-6 animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-bold text-hc-black dark:text-white mb-6 animate-fade-in-up transition-colors duration-300">
               FAU Coding Club
               <span className="block gradient-text">for High School Students</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-hc-slate mb-8 max-w-3xl mx-auto animate-fade-in">
+            <p className="text-xl md:text-2xl text-hc-slate dark:text-hc-muted mb-8 max-w-3xl mx-auto animate-fade-in transition-colors duration-300">
               Join fellow high school coders in Boca Raton for virtual meetings, 
               cutting-edge tech workshops, and epic hackathon adventures.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in">
-              <div className="flex items-center space-x-2 text-hc-muted">
+              <div className="flex items-center space-x-2 text-hc-muted dark:text-hc-muted">
                 <MapPin className="w-5 h-5" />
                 <span>Boca Raton, FL (Virtual Meetings)</span>
               </div>
-              <div className="flex items-center space-x-2 text-hc-muted">
+              <div className="flex items-center space-x-2 text-hc-muted dark:text-hc-muted">
                 <Clock className="w-5 h-5" />
                 <span>Weekly • Day TBD • 6-7 PM</span>
               </div>
@@ -209,13 +214,13 @@ export default function Home() {
       </section>
 
       {/* Weekly Activities Section */}
-      <section id="activities" className="py-20 bg-white">
+      <section id="activities" className="py-20 bg-white dark:bg-hc-dark transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-hc-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-hc-black dark:text-white mb-6 transition-colors duration-300">
               Weekly <span className="gradient-text">Activities</span>
             </h2>
-            <p className="text-xl text-hc-slate max-w-3xl mx-auto">
+            <p className="text-xl text-hc-slate dark:text-hc-muted max-w-3xl mx-auto transition-colors duration-300">
               Every week brings new coding challenges, learning opportunities, and ways to level up your skills. 
             </p>
           </div>
@@ -224,7 +229,7 @@ export default function Home() {
             {weeklyActivities.map((activity, index) => (
               <div 
                 key={activity.id}
-                className={`card-primary cursor-pointer ${selectedActivity === activity.id ? 'ring-2 ring-hc-red' : ''}`}
+                className={`bg-white dark:bg-hc-darkless p-6 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 cursor-pointer ${selectedActivity === activity.id ? 'ring-2 ring-hc-red' : ''}`}
                 onClick={() => setSelectedActivity(selectedActivity === activity.id ? null : activity.id)}
                 style={{animationDelay: `${index * 0.1}s`}}
               >
@@ -239,8 +244,8 @@ export default function Home() {
                     <activity.icon className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-hc-black mb-2">{activity.title}</h3>
-                    <p className="text-hc-slate text-sm leading-relaxed">{activity.description}</p>
+                    <h3 className="font-bold text-hc-black dark:text-white mb-2 transition-colors duration-300">{activity.title}</h3>
+                    <p className="text-hc-slate dark:text-hc-muted text-sm leading-relaxed transition-colors duration-300">{activity.description}</p>
                   </div>
                 </div>
               </div>
@@ -248,7 +253,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-8">
-            <p className="text-hc-muted">
+            <p className="text-hc-muted dark:text-hc-muted transition-colors duration-300">
               Activities may change based on member feedback and interests. 
             </p>
           </div>
@@ -256,13 +261,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-hc-snow">
+      <section id="features" className="py-20 bg-hc-snow dark:bg-hc-darkless transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-hc-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-hc-black dark:text-white mb-6 transition-colors duration-300">
               Why Join <span className="gradient-text">FAU Coding Club?</span>
             </h2>
-            <p className="text-xl text-hc-slate max-w-3xl mx-auto">
+            <p className="text-xl text-hc-slate dark:text-hc-muted max-w-3xl mx-auto transition-colors duration-300">
               We offer unique opportunities through our Hack Club affiliation and FAU partnership.
             </p>
           </div>
@@ -271,14 +276,14 @@ export default function Home() {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
+                className="bg-white dark:bg-hc-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-hc-red to-hc-orange rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-hc-black mb-4">{feature.title}</h3>
-                <p className="text-hc-slate leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-hc-black dark:text-white mb-4 transition-colors duration-300">{feature.title}</h3>
+                <p className="text-hc-slate dark:text-hc-muted leading-relaxed transition-colors duration-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -286,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* About Hack Club Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-hc-dark transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-hc-red text-white px-6 py-3 rounded-full mb-8">
@@ -294,11 +299,11 @@ export default function Home() {
               <span className="font-medium">Part of the Global Hack Club Network</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold text-hc-black mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-hc-black dark:text-white mb-8 transition-colors duration-300">
               Connected to <span className="gradient-text">Something Bigger</span>
             </h2>
             
-            <p className="text-xl text-hc-slate mb-8 leading-relaxed">
+            <p className="text-xl text-hc-slate dark:text-hc-muted mb-8 leading-relaxed transition-colors duration-300">
               As an official Hack Club chapter, we're part of a global community of teenage hackers 
               who code together, ship amazing projects, and support each other's growth. Through this 
               network, we're working toward establishing our own 501(c)(3) nonprofit status.
@@ -307,15 +312,15 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-3xl font-bold text-hc-red mb-2">1000+</div>
-                <div className="text-hc-slate">Hack Clubs Worldwide</div>
+                <div className="text-hc-slate dark:text-hc-muted transition-colors duration-300">Hack Clubs Worldwide</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-hc-orange mb-2">100+</div>
-                <div className="text-hc-slate">Countries Represented</div>
+                <div className="text-hc-slate dark:text-hc-muted transition-colors duration-300">Countries Represented</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-hc-green mb-2">$40M+</div>
-                <div className="text-hc-slate">In Grants & Resources</div>
+                <div className="text-hc-slate dark:text-hc-muted transition-colors duration-300">In Grants & Resources</div>
               </div>
             </div>
             
@@ -372,7 +377,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-hc-black text-white py-12">
+      <footer className="bg-hc-black dark:bg-hc-darker text-white py-12 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div>

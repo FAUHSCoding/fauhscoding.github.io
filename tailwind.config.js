@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -26,6 +27,17 @@ module.exports = {
         'hc-smoke': '#e0e6ed',
         'hc-snow': '#f9fafc',
         'hc-white': '#ffffff',
+        // Theme variables for light/dark mode
+        'text': '#1f2d3d',
+        'background': '#ffffff',
+        'elevated': '#ffffff',
+        'sheet': '#f9fafc',
+        'sunken': '#e0e6ed',
+        'border': '#e0e6ed',
+        'placeholder': '#8492a6',
+        'secondary': '#3c4858',
+        'primary': '#ec3750',
+        'accent': '#338eda',
       },
       fontFamily: {
         'phantom': ['"Phantom Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],

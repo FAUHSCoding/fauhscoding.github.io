@@ -8,6 +8,36 @@
   html {
     font-family: 'Phantom Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
+  
+  /* Light mode (default) */
+  :root {
+    --color-text: #1f2d3d;
+    --color-background: #ffffff;
+    --color-elevated: #ffffff;
+    --color-sheet: #f9fafc;
+    --color-sunken: #e0e6ed;
+    --color-border: #e0e6ed;
+    --color-placeholder: #8492a6;
+    --color-secondary: #3c4858;
+    --color-primary: #ec3750;
+    --color-accent: #338eda;
+    --color-muted: #8492a6;
+  }
+  
+  /* Dark mode */
+  .dark {
+    --color-text: #ffffff;
+    --color-background: #17171d;
+    --color-elevated: #252429;
+    --color-sheet: #252429;
+    --color-sunken: #121217;
+    --color-border: #252429;
+    --color-placeholder: #3c4858;
+    --color-secondary: #8492a6;
+    --color-primary: #ec3750;
+    --color-accent: #5bc0de;
+    --color-muted: #8492a6;
+  }
 }
 
 @layer components {
@@ -20,7 +50,7 @@
   }
   
   .card-primary {
-    @apply bg-white p-6 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105;
+    @apply bg-white dark:bg-hc-darkless p-6 rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105;
   }
   
   .gradient-text {
@@ -29,5 +59,25 @@
   
   .gradient-bg {
     @apply bg-gradient-to-br from-hc-blue via-hc-cyan to-hc-green;
+  }
+  
+  .theme-bg {
+    @apply bg-white dark:bg-hc-dark;
+  }
+  
+  .theme-text {
+    @apply text-hc-black dark:text-white;
+  }
+  
+  .theme-muted {
+    @apply text-hc-muted dark:text-hc-muted;
+  }
+  
+  .theme-border {
+    @apply border-gray-100 dark:border-hc-darkless;
+  }
+  
+  .theme-elevated {
+    @apply bg-white dark:bg-hc-darkless;
   }
 }
