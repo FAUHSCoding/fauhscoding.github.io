@@ -195,7 +195,7 @@ export default function Home() {
                 <ChevronRight className="w-5 h-5" />
               </a>
               <a 
-                href="https://discord.gg/u37Gx2QVHX" 
+                href="https://discord.gg/5W7BjxY39x" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-outline inline-flex items-center space-x-2"
