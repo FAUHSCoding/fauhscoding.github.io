@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { 
   Code, 
   MapPin, 
@@ -25,7 +26,7 @@ interface WeeklyActivity {
   id: string
   title: string
   description: string
-  icon: React.ComponentType<any>
+  icon: React.ComponentType<{ className?: string }>
   type: 'intro' | 'advanced' | 'competition' | 'social'
 }
 
@@ -135,6 +136,9 @@ export default function Home() {
               <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-hc-red dark:hover:text-hc-red font-medium transition-colors duration-200">
                 Features
               </a>
+              <Link href="/docs" className="text-gray-700 dark:text-gray-300 hover:text-hc-red dark:hover:text-hc-red font-medium transition-colors duration-200">
+                Docs
+              </Link>
               <DarkModeToggle />
               <a href="#join" className="bg-hc-red text-white px-4 py-2 rounded-lg font-medium hover:bg-hc-red/90 transition-all duration-200 shadow-sm hover:shadow-md">
                 Join Us
@@ -304,9 +308,9 @@ export default function Home() {
             </h2>
             
             <p className="text-xl text-hc-slate dark:text-hc-muted mb-8 leading-relaxed transition-colors duration-300">
-              As an official Hack Club chapter, we're part of a global community of teenage hackers 
-              who code together, ship amazing projects, and support each other's growth. Through this 
-              network, we're working toward establishing our own 501(c)(3) nonprofit status.
+              As an official Hack Club chapter, we&apos;re part of a global community of teenage hackers 
+              who code together, ship amazing projects, and support each other&apos;s growth. Through this 
+              network, we&apos;re working toward establishing our own 501(c)(3) nonprofit status.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -399,6 +403,7 @@ export default function Home() {
                 <a href="#about" className="block text-hc-muted hover:text-white transition-colors">About</a>
                 <a href="#activities" className="block text-hc-muted hover:text-white transition-colors">Activities</a>
                 <a href="#features" className="block text-hc-muted hover:text-white transition-colors">Features</a>
+                <Link href="/docs" className="block text-hc-muted hover:text-white transition-colors">Documentation</Link>
                 <a href="https://hackclub.com/" className="block text-hc-muted hover:text-white transition-colors">Hack Club</a>
               </div>
             </div>
